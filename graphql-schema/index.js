@@ -1,5 +1,6 @@
 const { GraphQLSchema, GraphQLObjectType } = require('graphql');
-const { Article, Articles } = require('./articles/queries');
+const { Article, Articles } = require('./article/queries');
+const { AddArticle, UpdateArticle } = require('./article/mutations');
 
 module.exports = new GraphQLSchema({
     query: new GraphQLObjectType({
@@ -7,6 +8,13 @@ module.exports = new GraphQLSchema({
         fields: () => ({
             Article,
             Articles,
+        }),
+    }),
+    mutation: new GraphQLObjectType({
+        name: 'Mutation',
+        fields: () => ({
+            AddArticle,
+            UpdateArticle,
         }),
     }),
 });

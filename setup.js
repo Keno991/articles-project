@@ -1,7 +1,7 @@
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-var { graphqlHTTP } = require('express-graphql');
+const { graphqlHTTP } = require('express-graphql');
 const models = require('./db/models');
 const schema = require('./graphql-schema');
 

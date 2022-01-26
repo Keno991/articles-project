@@ -1,5 +1,12 @@
-# articles-project
-node.js based app for testing various technologies with articles CRUD thematic
+# boilerplate-node-graphql
+Node.js based app for testing various technologies with articles thematic
 
-installing and running:
+### Technologies:
+- graphql
+- nodejs
+- express
+- sequelize
+- docker
+
+### installing and running:
 - docker compose up

@@ -1,5 +1,5 @@
 const graphql = require('graphql');
-const ArticleType = require('./articles');
+const { ArticleType } = require('./article');
 const {
     GraphQLList,
     GraphQLString,
@@ -9,7 +9,6 @@ const {
 const Articles = {
     type: GraphQLList(ArticleType),
     resolve (parentValue, args, context) {
-        console.log(context);
         return context.db.Article.findAll({});
     }
 };
